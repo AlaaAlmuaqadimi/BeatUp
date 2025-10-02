@@ -1,0 +1,121 @@
+html{
+  font-size: 62%;
+  overflow-x: hidden;
+}
+
+body{ 
+  overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1000;
+    padding: 2rem 7%;
+    background-color: var(--pageColer)  ;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header .logo i{
+    padding: 0.5rem;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #fff;
+    position: relative;
+
+}
+
+header .navbar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    width: 0%;
+    height: 0.2rem;
+    background: #fff;
+    transition: .2s linear;
+} 
+
+header .navbar ul li a.active::before,
+header .navbar ul li a:hover::before{ 
+    left: 0;
+    width: 100%;
+}
+
+header #menu{
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
+    display: none; 
+}
+
+
+/* media queries */
+@media (max-width: 800px) {
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem 3%;
+    }
+    
+    header #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top: -120%;
+        left:0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        transition: .3s linear;
+        opacity: 0;
+    }
+
+    header .navbar ul{
+        flex-direction: column;
+        padding: 2rem 0;
+        justify-content: center;
+    } 
+
+    header .navbar ul li a{
+        font-size: 2.5rem; 
+        display: block;
+        margin: 1rem 0;
+        color: var(--pageColer);
+    }
+
+    header .navbar ul li a::before{
+     background-color: var(--pageColer);  
+    }
+
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        top: 7.4rem;
+        opacity: 1;  
+    }
+}

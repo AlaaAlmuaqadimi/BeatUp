@@ -1,0 +1,69 @@
+.features {
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 7rem;
+}
+.features .heading{
+    background : var(--secondery-color); 
+}
+
+.title{
+    font-size: 2.8rem;
+    color: var(--third-color);
+    margin-bottom: 3rem;
+    text-transform: uppercase; 
+}
+
+.features .description{
+    width: auto;
+    font-size: 2rem;
+    color: #666;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+}
+
+.features .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.features .box-container .box{
+    flex: 1 1 30rem;
+    margin: 1rem;
+    width: 30rem;
+    z-index: 0;
+    position: relative;  
+    
+}
+
+.features .box-container .box::before{
+    content: '';
+    position: absolute;
+    top: 28.5%;
+    left: 50.2%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--fourth-color);
+    height: 10rem;
+    width: 10rem;
+    z-index: -1;  
+    box-shadow: 0 0 0 1rem rgba(0,0,225,.1);
+}
+
+.features .box-container .box i{
+    font-size: 4rem;
+    color: var(--third-color);
+    margin: 12rem 2rem; 
+}
+
+.features .box-container .box h3{
+    color: var(--pageColer);
+    font-size: 3rem;  
+}
+
+.features .box-container .box p{
+    font-size: 1.8rem;
+    color: #666; 
+    padding: 1rem 0;
+}

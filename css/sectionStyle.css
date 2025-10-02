@@ -1,0 +1,119 @@
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url(../image/homg-img.png) no-repeat;
+    background-size: 120% 85%;
+    background-position:top;
+    padding: 1.5rem 7%;
+    padding-top: 10rem;
+}
+
+.home .image{
+    flex: 1 1 45rem;
+    padding-top: 6rem; 
+}
+
+.home .image img{ 
+    width: 100%;
+}
+
+.home .content{
+    flex: 1 1 45rem;
+    padding-left: 3rem;
+}
+
+.home .content h1{
+    font-size: 3rem;
+    color:#fff ;
+}
+
+.home .content p{
+    font-size: 3rem;
+    color:#eee ;
+    padding: 5rem 0;
+}
+
+.btn{
+    font-size: 2rem;
+    padding: 3rem 3.5rem;
+    border-radius: 5rem;
+    color: #fff;
+    background: var(--pageColer);
+    margin-top: 1rem;
+    box-shadow: 0.3rem 0.5rem rgba(0,0,0,.3);
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 0; 
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--pageColer);
+    z-index: -1;
+    transition: .3s linear;
+}
+
+.btn:hover::before{
+    left: 0;
+    width: 100%; 
+}
+
+.home .content .btn{
+    background: #fff;
+    color: var(--pageColer); 
+}
+
+.home .content .btn:hover{ 
+    color: #fff; 
+}
+
+/* media queries */
+@media (max-width: 800px) {
+    .home{
+        padding: 2.5rem;
+        padding-top: 10rem;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+
+    .home .image, .home .content{
+        flex: 1 1 100%;
+        padding: 0;
+    }
+
+    .home .image{
+        border: 2;
+        margin-top: 2rem; 
+    }
+
+    .home .content {
+         text-align: left;
+    }
+
+    .home .content h1{
+        font-size: 4.5rem;
+        padding: 2rem ;
+    }
+
+    .home .content p{
+        font-size: 2.5rem;
+        padding: 2rem ;
+    }
+
+    .btn{
+        font-size: 1.5rem;
+        padding: 2rem 3rem;  
+        font-size: 2rem;
+    }
+}

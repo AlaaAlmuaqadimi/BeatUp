@@ -1,0 +1,134 @@
+.contact {
+  padding: 80px 20px;
+  background: var(--fourth-color);
+  text-align: center;
+}
+
+.contact .heading {
+  font-size: 2.5rem;
+  color: var(--pageColer);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact .title {
+  font-size: 3rem;
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+
+.contact .description{
+    width: auto;
+    font-size: 2rem;
+    color: #666;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+}
+
+.contact .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  flex: 1 1 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact form .box {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid var(--secondery-color);
+  font-size: 2rem;
+  color: #333;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact form .box:focus {
+  border-color: var(--pageColer);
+  box-shadow: 0 0 5px var(--pageColer);
+}
+
+.contact form textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+.contact form .btn {
+  padding: 12px 20px;
+  background: var(--pageColer);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.contact form .btn:hover {
+  background: var(--third-color);
+  color: #000;
+}
+
+.contact .image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.contact .image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 60px 15px;
+  }
+
+  .contact .heading {
+    font-size: 2rem;
+  }
+
+  .contact .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 40px 10px;
+  }
+
+  .contact .heading {
+    font-size: 1.7rem;
+  }
+
+  .contact .title {
+    font-size: 1rem;
+  }
+
+  .contact .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact form {
+    padding: 20px;
+  }
+
+  .contact form .btn {
+    width: 100%; /* يخلي زر send message ياخذ العرض بالكامل */
+  }
+}

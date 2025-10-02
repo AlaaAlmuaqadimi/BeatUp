@@ -1,0 +1,149 @@
+.product {
+  padding: 80px 20px;
+  background: var(--fourth-color);
+  text-align: center;
+}
+
+.product .heading{
+  font-size: 2.5rem;
+  color: var(--pageColer);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.product .title {
+  font-size: 3rem;
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+
+.product .description{
+    width: auto;
+    font-size: 2rem;
+    color: #666;
+    margin: 0 auto;
+    padding: 1rem 5rem;
+}
+
+.product .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product .box {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.product .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product .box .image {
+  width: 100%;
+  text-align: center;
+  background: var(--fourth-color);
+  padding: 20px;
+}
+
+.product .box .image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product .box:hover .image img {
+  transform: scale(1.05);
+}
+
+.product .box .content {
+  padding: 20px;
+}
+
+.product .box .content h3 {
+  font-size: 1.3rem;
+  color: var(--pageColer);
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.product .box .content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.product .box .content .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--pageColer);
+  margin-bottom: 15px;
+}
+
+.product .box .content .price span {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.product .box .content .btn {
+  padding: 10px 20px;
+  background: var(--pageColer);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+.product .box .content .btn:hover {
+  background: var(--third-color);
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .product {
+    padding: 60px 15px;
+  }
+
+  .product .heading {
+    font-size: 2rem;
+  }
+
+  .product .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    padding: 40px 10px;
+  }
+
+  .product .heading {
+    font-size: 1.7rem;
+  }
+
+  .product .title {
+    font-size: 1rem;
+  }
+
+  .product .box-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product .box .content .btn {
+    width: 100%;
+  }
+}
